@@ -1,0 +1,310 @@
+
+
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.header.visible {
+    transform: translateY(0);
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: color 0.3s, border 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+/* При наведении */
+header nav a:hover {
+    color: #7c0404; /* Красный цвет */
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Расстояние до текста */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Толщина линии */
+    background-color: #fff; /* Белая линия */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+/* Линия при наведении */
+header nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+h1 {
+    font-family: 'Georgia', serif;
+}
+
+h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #7c0404;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Вступительный раздел с видео на фоне */
+.intro {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Видео на фоне */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    inset: 0px 0px 20px 0px rgba(0,0,0,1);
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезает видео так, чтобы оно покрывало весь экран */
+    object-position: center center; /* Центрируем видео */
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезает видео так, чтобы оно покрывало весь экран */
+    border-radius: 10px;
+}
+
+#video-two {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезает видео так, чтобы оно покрывало весь экран */
+    border-radius: 10px;
+}
+
+/* Контент, который будет отображаться поверх видео */
+.content {
+    position: absolute;
+    top: 45%; /* Поднимаем текст чуть выше */
+    left: 67%; /* Чуточку левее */
+    transform: translate(-30%, -50%); /* Корректируем центрирование */
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.content img {
+    width: 60%; /* Чуть больше половины */
+    height: auto; /* Сохраняем пропорции */
+    max-height: 50vh; /* Ограничиваем высоту, если нужно */
+    opacity: 0.9; /* 50% прозрачности */
+}
+
+
+.content h1 {
+    font-size: 3rem;
+    opacity: 0.9;
+}
+
+.content p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Секции */
+.section {
+    padding: 60px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* вторая секция */
+.container-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-two .left {
+    width: 48%;
+    z-index: -1;
+}
+
+.container-two .right {
+    width: 48%;
+    position: relative;
+    z-index: 1;
+}
+
+.left {
+    width: 48%;
+}
+
+.right {
+    width: 48%;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Финальный раздел */
+.final {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.final h2 {
+    margin-bottom: 20px;
+}
+
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: bold;
+    color: #7c0404;
+    margin: 20px 0;
+}
+
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background-color: #cecece; /* Цвет линий */
+    margin: 0 10px; /* Отступы от символа */
+    width: 80%; 
+    max-width: 475px; 
+}
+
+footer {
+    background-color: #070707;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Merriweather', serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #2e2e2e;
+}
+
+
+/* Отступы и мобильная адаптация */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

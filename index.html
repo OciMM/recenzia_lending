@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenzia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let lastScrollTop = 0;
+        const header = document.getElementById("dynamic-header");
+        
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.classList.add("visible");
+            } else if (scrollTop === 0) {
+                header.classList.remove("visible");
+            }
+            lastScrollTop = scrollTop;
+        });
+    });
+</script>
+
+
+<body>
+    <header id="dynamic-header" class="header">
+        <nav>
+            <a href="#uvod">Úvod</a>
+            <a href="#jadro">Jadro</a>
+            <a href="#zaver">Záver</a>
+        </nav>
+    </header>
+    <!-- Вступительный раздел с видео на фоне -->
+    <section class="intro">
+        <div class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="media/main.mp4" type="video/mp4">
+                Ваш браузер не поддерживает тег video.
+            </video>
+        </div>
+        <div class="content">
+            <img src="media/symbols.png" alt="Иероглифы">
+            <h1>Recenzia</h1>
+            <p>Kniha piatich kruhov</p>
+        </div>
+    </section>
+    <div class="separator">剣</div>
+    <!-- Раздел 1: Представление -->
+    <section id="uvod" class="section">
+        <div class="container">
+            <div class="left">
+                <h2>Úvod</h2>
+                <p>
+                    Kniha piatich kruhov je filozofická kniha, ktorá bola napísaná v 17. storočí legendárnim samurajom <span style="color: #7c0404;"><b>Mijamotom Musashim</b></span>.
+                    Kniha je venovaná umeniu stratégie. V tejto knihe je napísané nielen o bitkách, ale aj o vojne, živote a iných otázkach.
+                    Je to zaujímavá kniha, pretože sa v nej odráža takmer celá japonská kultúra a ich filozofia života.
+                    On písal v metaforách a konceptoch, ktoré spájal s piatimi prvkami ako Zem, Voda, Oheň, Vzduch a Prázdnota.
+                </p>
+            </div>
+            <div class="right">
+                <img src="media/musasi.jpg" alt="musasi">
+            </div>
+        </div>
+    </section>
+
+    <div class="separator">道</div>
+
+    <!-- Раздел 2: Введение -->
+    <section id="jadro" class="section">
+        <div class="container-two">
+            <div class="left">
+                <video autoplay muted loop id="video-two">
+                    <source src="media/uvod_two.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+            <div class="right">
+                <h2>Jadro</h2>
+                <p>V knihe je päť "kruhov" okolo nich je založeny text a filozofia.
+                    <h3>Zem - základy stratégie</h3>toto je hlavná strategia. Musaši hovorí cez metafory, ktoré všade sam použival.
+                    Zem to je stabilita, fundumentálnosť a pevnosť. Ak človek chce mať zručnosť, musí vedieť základy, aby mohol dosiahnuť svoju disciplinu.
+                    Zem to je jasnosť myslenia a konania. Kto chce sa stať strategom musí byť spokojným a toto je hlavný základ. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="separator">魂</div>
+    <!-- Раздел 3: -->
+    <section class="section">
+        <div class="container-two">
+            <div class="left">
+                <p>
+                    <h3>Voda - flexibilita a prispôsobivosť</h3>
+                    Zdôraznenie flexibility ako kľučovej kvality. Strateg nesmie byť strnulým, musí byť schopným prispôsobiť akýmkoľvek okolnostiam.
+                    To je zručnosť byť otvoreným pre nových nápadov
+                    <h3>Oheň - odhodlanie a energia</h3>
+                    Oheň symbolizuje silu, odhodlanie, a aktívne činy. Tu Musaši hovorí o energie, vdaka ktorej človek dosiahnuť cieľ, ale oheň je nebezpečný, a preto človek predtým musí mať základy strategie.
+
+                </p>
+            </div>
+            <div class="right">
+                <img src="media/part3.jpg" alt="part3">
+            </div>
+        </div>
+    </section>
+
+    <div class="separator">忍</div>
+
+    <!-- Раздел 4 -->
+    <section class="section">
+        <div class="container-two">
+            <div class="left">
+                <video autoplay muted loop id="video-two">
+                    <source src="media/part4.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+            <div class="right">
+                <p>
+                    <h3>Vzduch - porozumenie a vnímanie</h3>
+                    Vzduch je vnímanie, intuícia a schopnosť porozumieť svetu okolo nás.
+                    Musaši hovorí o tom ako dôležite mať strategickú intuiciu a zručnosť porozumieť situáciu v reálnom čase.
+                    To je časť o pozornosti, o tom ako spravne použivať toto v bytke a živote.
+                    Ešte Musaši často hovorí o meči ako o nástroji, ale meč v japonskej kulture je štyl života.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator">義</div>
+    <!-- Раздел 5: Конец-->
+    <section class="section">
+        <div class="container-two">
+            <div class="left">
+                <h2>Prázdnota - filozofia a vnútorný svet</h2>
+                <p>
+                Musaši učí, že každý človek, ako aj master bojov, musí rozumieť nielen fizické princípy stratégie, ale ešte filozofickú prázdnotu, ktorá je základom pre slobody a vnútorného rastu.
+                Prázdnota nielen absencia niečoho, ale to je priestor pre nekonečné možnosti, zmenu a slobodu.
+                Tento stav, v ktorom človek oslobodí od pripútaností a ega, umožňuje mu konať s plným uvedomením a bez zbytočných myšlienok alebo túžob.
+                Týmto spôsobom prázdnota sa stava záverečnou etapou na ceste sebazdokaľovania
+                </p>
+            </div>
+            <div class="right">
+                <img src="media/zaver.png" alt="zaver">
+            </div>
+        </div>
+    </section>
+    <div class="separator">無</div>
+    <!-- Раздел 5: Заключение -->
+    <section id="zaver" class="section">
+        <div class="container-two">
+            <div class="left">
+                <video autoplay muted loop id="video-two">
+                    <source src="media/sam.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+            <div class="right">
+                <p>
+                    <h2>Záver</h2>
+                    Prázdnota v jeho filozofii pripomína budhistický koncept „šunjaty“ – stav, v ktorom sa človek oslobodí od všetkých vnútorných obmedzení a pripútaností, čo mu umožňuje byť v úplnej harmónii so sebou samým a svetom okolo neho. 
+                    Takéto zakončenie nielen prehlbuje pochopenie ho filozofie, ale zároveň zdôrazňuje jej podobnosť s východnou múdrosťou, kde prázdnota nie je len fyzická alebo duchovná neprítomnosť, ale oslobodenie od všetkých zbytočných väzieb a ochota byť v harmónii so svetom.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>"Pozdvihni sa nad osobnou láskou a osobným utrpením – existuj pre dobro ľudstva." – Mijamoto Musaši</p>
+            <p>&copy; 2025, Maksim Bekasov</p>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>
+
